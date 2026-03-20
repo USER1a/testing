@@ -1,0 +1,14 @@
+packages:
+  "framer-motion": "For cinematic page transitions, smooth layout changes, and fluid player animations"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes"
+  "date-fns": "For formatting durations and dates"
+
+images:
+  - path: "artifacts/movie-player/public/images/hero-bg.png"
+    description: "Dark cinematic background, abstract deep red and black ambient glow, subtle film grain texture, studio lighting effect"
+    aspect_ratio: "16:9"
+
+notes:
+  - Frontend assumes the backend `/api/streams` handles CORS and properly proxies the requests to MovieBox.
+  - Video playback uses native HTML5 video element; CDN stream URLs must support GET requests from the browser.
