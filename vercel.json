@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter @workspace/movie-player run build",
+  "buildCommand": "node scripts/build-handler.mjs && pnpm --filter @workspace/movie-player run build",
   "outputDirectory": "dist",
   "installCommand": "pnpm install",
   "framework": null,
   "functions": {
-    "api/handler/index.ts": {
+    "api/dist/handler.js": {
       "maxDuration": 30
     }
   },
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/handler" },
+    { "src": "/api/(.*)", "dest": "/api/dist/handler" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
