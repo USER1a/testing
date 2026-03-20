@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "pnpm --filter @workspace/movie-player run build",
-  "outputDirectory": "artifacts/movie-player/dist/public",
+  "outputDirectory": "artifacts/movie-player/dist",
   "installCommand": "pnpm install",
   "framework": null,
   "routes": [
