@@ -6,11 +6,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
 await build({
-  entryPoints: [resolve(root, "api/handler/index.ts")],
+  entryPoints: [resolve(root, "artifacts/api-server/src/app.ts")],
   bundle: true,
   platform: "node",
   format: "cjs",
-  outfile: resolve(root, "api/dist/handler.js"),
+  outfile: resolve(root, "api/handler/index.js"),
   external: ["pg-native", "bufferutil", "utf-8-validate"],
   define: {
     "process.env.NODE_ENV": '"production"',
